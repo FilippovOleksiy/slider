@@ -95,7 +95,7 @@ function Slider({ activeSlide = 0, slides }) {
       }}
       ref={containerRef}
     >
-      {state.activeSlide > 1 && (
+      {state.activeSlide > 0 && (
         <ArrowContainer onClick={prevSlide} style={{ left: "0px" }}>
           <Arrow direction="left" />
         </ArrowContainer>
