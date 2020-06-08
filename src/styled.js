@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import cssVariables from "./common/cssVariables";
-import backgroundImg from "./bg.png";
+import backgroundImg from "./assets/bg.png";
 
 const { colors } = cssVariables;
 
@@ -15,10 +15,10 @@ export const Cover = styled.div`
 `;
 
 export const BackgroundImg = styled.div`
-  background: url(${backgroundImg});
   width: 100%;
   height: 100%;
   position: fixed;
+  background: url(${backgroundImg});
   z-index: -1;
 `;
 

@@ -6,10 +6,10 @@ export const Container = styled.div`
 
 export const UserPosition = styled.div`
   color: white;
-  font-size: 5vw;
+  font-size: 3vw;
 `;
 
 export const UserName = styled.div`
   color: white;
-  font-size: 10vw;
+  font-size: 7vw;
 `;

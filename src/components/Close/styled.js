@@ -7,7 +7,7 @@ export const CloseIcon = styled.div`
   transform: rotate(45deg);
 
   &:hover {
-    transform: rotate(135deg);
+    transform: rotate(405deg) scale(1.2);
     transition: transform 0.5s;
   }
 

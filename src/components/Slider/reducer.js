@@ -34,16 +34,24 @@ export function reducer(state, { type, payload }) {
       return { ...state, downPosition: payload };
     case SET_SLIDE_POSITION:
       const delta = payload - state.sliderPosition;
+      let activeSlide = state.activeSlide;
       if (Math.abs(delta) > state.slideWidth / 2) {
         if (delta < 0) {
           payload = state.sliderPosition - state.slideWidth;
+          activeSlide += 1;
         } else {
           payload = state.sliderPosition + state.slideWidth;
+          activeSlide -= 1;
         }
       } else {
         payload = state.sliderPosition;
       }
-      return { ...state, sliderPosition: payload, activePosition: payload };
+      return {
+        ...state,
+        sliderPosition: payload,
+        activePosition: payload,
+        activeSlide,
+      };
     case SET_SLIDE_WIDTH:
       return {
         ...state,
